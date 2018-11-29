@@ -1,9 +1,11 @@
 # Utils
 工具类
 引入方式
+
+
 	allprojects {
 		repositories {
-			...
+		
 			maven { url 'https://jitpack.io' }
 		}
 	}
