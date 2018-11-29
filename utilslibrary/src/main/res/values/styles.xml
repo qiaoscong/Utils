@@ -1,62 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-    <style name="FindTabLayoutTextStyle">
-        <item name="android:textSize">15sp</item>
-    </style>
-
-    <style name="mydialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-    </style>
-
-    <style name="Votedialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-    </style>
-
-    <style name="FABMenuButton">
-        <item name="fab_size">mini</item>
-        <item name="fab_colorNormal">#50a2e1</item>
-        <item name="fab_colorPressed">#0090ff</item>
-        <item name="fab_colorRipple">#7FFFFFFF</item>
-        <!--<item name="fab_shadowColor">#e550a2e1</item>-->
-        <!--<item name="fab_shadowRadius">2dp</item>-->
-        <!--<item name="fab_shadowXOffset">0dp</item>-->
-        <!--<item name="fab_shadowYOffset">2dp</item>-->
-
-    </style>
-
-    <style name="Widget_GifView" />
-
-
-    <!-- pop -->
-    <style name="Animations" />
-
-    <style name="Animations.GrowFromBottomRight">
-        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
-        <item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
-    </style>
-
-    <style name="toptenAutoCompleteStyle">
-        <item name="android:dropDownVerticalOffset">5dp</item>
-    </style>
-
-
     <style name="DialogTheme">
         <!-- 除边框 -->
         <item name="android:windowFrame">@null</item>
