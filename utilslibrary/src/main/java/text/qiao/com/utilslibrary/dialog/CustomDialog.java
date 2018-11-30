@@ -28,7 +28,7 @@ public class CustomDialog extends Dialog {
         window.setWindowAnimations(R.style.dialogWindowAnim);
 
         WindowManager.LayoutParams params = window.getAttributes();
-        params.width = WindowManager.LayoutParams.MATCH_PARENT;
+        params.width = WindowManager.LayoutParams.WRAP_CONTENT;
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         //params.alpha = 0.6f; //背景透明
         window.setAttributes(params);
