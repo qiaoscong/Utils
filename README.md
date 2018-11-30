@@ -19,7 +19,7 @@
   
   	dependencies {
 	
-	        implementation 'com.github.qiaoscong:Utils:1.3.2'
+	        implementation 'com.github.qiaoscong:Utils:v1.3.2'
 		
 	}
 	
