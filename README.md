@@ -16,6 +16,7 @@
 	
 # 介绍：
   1.图片处理类
+  
      BitmapCompressUtils
      
   2.集合判断工具
