@@ -4,14 +4,23 @@
 
 
 	allprojects {
+	
 		repositories {
 		
-			maven { url 'https://jitpack.io' }
+			maven {
+			
+			url 'https://jitpack.io' 
+			
+			}
+			
 		}
+		
 	}
   
   	dependencies {
-	        implementation 'com.github.qiaoscong:Utils:1.3.1'
+	
+	        implementation 'com.github.qiaoscong:Utils:1.3.2'
+		
 	}
 	
 # 介绍：
