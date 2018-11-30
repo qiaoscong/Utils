@@ -15,6 +15,10 @@
         <!--<item name="android:backgroundDimEnabled">false</item>-->
         <item name="android:backgroundDimEnabled">true</item>
     </style>
-
+    <!--dialog动画-->
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_alpha_in</item>
+        <item name="android:windowExitAnimation">@anim/popup_alpha_out</item>
+    </style>
 
 </resources>
