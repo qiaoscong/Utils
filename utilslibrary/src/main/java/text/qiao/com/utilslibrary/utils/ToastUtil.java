@@ -23,75 +23,52 @@ public class ToastUtil {
     /**
      * 显示Toast,页面中重复Toast不会重复实例化Toast对象
      * 2000ms
+     *
      * @param charSequence 字符串
      */
-    public static void show(CharSequence charSequence) {
-
-        if (mToast == null) {
-            mToast = Toast.makeText(mContext, charSequence, Toast.LENGTH_SHORT);
-            mToast.setGravity(Gravity.CENTER, 0, 0);
-        } else {
-            mToast.setText(charSequence);
-            mToast.setDuration(Toast.LENGTH_SHORT);
-        }
-
-        mToast.show();
+    public static void showShort(CharSequence charSequence) {
+        show(charSequence, Toast.LENGTH_SHORT);
     }
 
     /**
-
-    /**
+     * /**
      * 显示Toast,页面中重复Toast不会重复实例化Toast对象
      * 3500ms
+     *
      * @param charSequence 字符串
      */
     public static void showLong(CharSequence charSequence) {
-
-        if (mToast == null) {
-            mToast = Toast.makeText(mContext, charSequence, Toast.LENGTH_LONG);
-            mToast.setGravity(Gravity.CENTER, 0, 0);
-        } else {
-            mToast.setText(charSequence);
-            mToast.setDuration(Toast.LENGTH_LONG);
-        }
-//        mToast.getView().setBackgroundColor(mContext.getResources().getColor(R.color.theme_orange));
-
-        mToast.show();
+        show(charSequence, Toast.LENGTH_LONG);
     }
 
     /**
      * 显示Toast,页面中重复Toast不会重复实例化Toast对象
      * 2000ms
+     *
      * @param resId String资源ID
      */
-    public static void show(int resId) {
-
-        if (mToast == null) {
-            mToast = Toast.makeText(mContext, resId, Toast.LENGTH_SHORT);
-            mToast.setGravity(Gravity.CENTER, 0, 0);
-        } else {
-            mToast.setText(resId);
-            mToast.setDuration(Toast.LENGTH_SHORT);
-        }
-
-        mToast.show();
+    public static void showShort(int resId) {
+        show(mContext.getText(resId), Toast.LENGTH_SHORT);
     }
 
     /**
      * 显示Toast,页面中重复Toast不会重复实例化Toast对象
      * 3500ms
+     *
      * @param resId String资源ID
      */
     public static void showLong(int resId) {
+        show(mContext.getText(resId), Toast.LENGTH_LONG);
+    }
 
+    public static void show(CharSequence text, int continuous) {
         if (mToast == null) {
-            mToast = Toast.makeText(mContext, resId, Toast.LENGTH_LONG);
+            mToast = Toast.makeText(mContext, text, continuous);
             mToast.setGravity(Gravity.CENTER, 0, 0);
         } else {
-            mToast.setText(resId);
-            mToast.setDuration(Toast.LENGTH_LONG);
+            mToast.setText(text);
+            mToast.setDuration(continuous);
         }
-
         mToast.show();
     }
 
