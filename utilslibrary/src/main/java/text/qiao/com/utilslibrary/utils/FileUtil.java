@@ -1,5 +1,6 @@
 package text.qiao.com.utilslibrary.utils;
 
+import android.content.Context;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
@@ -259,34 +260,34 @@ public class FileUtil {
         }
         return file.getAbsolutePath();
     }
-//
-//    //返回"/data/user/0/com.xxx.xxx/cache"目录
-//    public static String getCacheDir() {
-//        return MyApplication.getInstance().getApplication().getCacheDir().getAbsolutePath();
-//    }
-//
-//    //返回"/data/user/0/com.xxx.xxx/files"目录
-//    public static String getFilesDir() {
-//        return MyApplication.getInstance().getApplication().getFilesDir().getAbsolutePath();
-//    }
-//
-//    //返回"/storage/emulated/0/Android/data/com.xxx.xxx/cache"目录
-//    public static String getExternalCacheDir() {
-//        return MyApplication.getInstance().getApplication().getExternalCacheDir().getAbsolutePath();
-//    }
-//
-//    /**
-//     * @param type 所放的文件的类型，传入的参数是Environment类中的DIRECTORY_XXX静态变量
-//     * @return  返回"/storage/emulated/0/Android/data/com.xxx.xxx/files/Alarms"目录
-//     *          例如传入Environment.DIRECTORY_ALARMS则返回"/storage/emulated/0/Android/data/com.xxx.xxx/files/Alarms"
-//     */
-//    public static String getExternalFilesDir(String type) {
-//        File file = MyApplication.getInstance().getApplication().getExternalFilesDir(Environment.DIRECTORY_ALARMS);
-//        //返回的目录有可能不存在
-//        if (!file.exists()) {
-//            file.mkdirs();
-//        }
-//        return file.getAbsolutePath();
-//    }
+
+    //返回"/data/user/0/com.xxx.xxx/cache"目录
+    public static String getCacheDir(Context context) {
+        return context.getCacheDir().getAbsolutePath();
+    }
+
+    //返回"/data/user/0/com.xxx.xxx/files"目录
+    public static String getFilesDir(Context context) {
+        return context.getFilesDir().getAbsolutePath();
+    }
+
+    //返回"/storage/emulated/0/Android/data/com.xxx.xxx/cache"目录
+    public static String getExternalCacheDir(Context context) {
+        return context.getExternalCacheDir().getAbsolutePath();
+    }
+
+    /**
+     * @param type 所放的文件的类型，传入的参数是Environment类中的DIRECTORY_XXX静态变量
+     * @return  返回"/storage/emulated/0/Android/data/com.xxx.xxx/files/Alarms"目录
+     *          例如传入Environment.DIRECTORY_ALARMS则返回"/storage/emulated/0/Android/data/com.xxx.xxx/files/Alarms"
+     */
+    public static String getExternalFilesDir(Context context,String type) {
+        File file = context.getExternalFilesDir(Environment.DIRECTORY_ALARMS);
+        //返回的目录有可能不存在
+        if (!file.exists()) {
+            file.mkdirs();
+        }
+        return file.getAbsolutePath();
+    }
 
 }
